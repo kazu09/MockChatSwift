@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MockChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-8l-NRJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="659"/>
+                                <color key="backgroundColor" red="0.83581250910000005" green="0.99236553910000003" blue="0.98862093689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTm-Ih-jCP">
+                                <rect key="frame" x="0.0" y="718" width="393" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6w-1O-i6N">
+                                        <rect key="frame" x="325.66666666666669" y="34" width="52.333333333333314" height="32"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="送信">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="requestButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iT7-pv-Kg8"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メッセージを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PwE-6l-hkG">
+                                        <rect key="frame" x="15" y="33" width="290.66666666666669" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="q6w-1O-i6N" firstAttribute="leading" secondItem="PwE-6l-hkG" secondAttribute="trailing" constant="20" id="LF6-mN-zy2"/>
+                                    <constraint firstItem="q6w-1O-i6N" firstAttribute="centerY" secondItem="rTm-Ih-jCP" secondAttribute="centerY" id="ioC-Tp-axY"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6w-1O-i6N" secondAttribute="trailing" constant="15" id="n2X-K8-d5Z"/>
+                                    <constraint firstItem="PwE-6l-hkG" firstAttribute="leading" secondItem="rTm-Ih-jCP" secondAttribute="leading" constant="15" id="rob-o9-TUu"/>
+                                    <constraint firstItem="PwE-6l-hkG" firstAttribute="centerY" secondItem="rTm-Ih-jCP" secondAttribute="centerY" id="uXW-Al-5T1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <keyboardLayoutGuide key="keyboard" id="taX-g1-app"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EAM-8l-NRJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Knc-OT-DkW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EAM-8l-NRJ" secondAttribute="trailing" id="SOS-TL-vOA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EAM-8l-NRJ" secondAttribute="bottom" constant="100" id="Yf8-X3-Ri1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rTm-Ih-jCP" secondAttribute="bottom" id="ba7-J2-kTG"/>
+                            <constraint firstItem="rTm-Ih-jCP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dPN-HY-Qda"/>
+                            <constraint firstItem="rTm-Ih-jCP" firstAttribute="top" secondItem="EAM-8l-NRJ" secondAttribute="bottom" id="m17-mq-vo0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rTm-Ih-jCP" secondAttribute="trailing" id="p6c-Qd-7i9"/>
+                            <constraint firstItem="EAM-8l-NRJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pzf-DG-JAd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputArea" destination="rTm-Ih-jCP" id="HSA-g1-p3E"/>
+                        <outlet property="messageInputTextField" destination="PwE-6l-hkG" id="7Zo-0C-uhi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
