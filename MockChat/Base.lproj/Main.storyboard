@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-8l-NRJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-8l-NRJ">
                                 <rect key="frame" x="0.0" y="59" width="393" height="659"/>
                                 <color key="backgroundColor" red="0.83581250910000005" green="0.99236553910000003" blue="0.98862093689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="inputArea" destination="rTm-Ih-jCP" id="HSA-g1-p3E"/>
                         <outlet property="messageInputTextField" destination="PwE-6l-hkG" id="7Zo-0C-uhi"/>
+                        <outlet property="tableView" destination="EAM-8l-NRJ" id="nJ5-t3-Z5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
