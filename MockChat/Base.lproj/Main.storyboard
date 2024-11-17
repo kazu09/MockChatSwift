@@ -46,6 +46,9 @@
                                         <rect key="frame" x="15" y="33" width="290.66666666666669" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="changeInputArea:" destination="BYZ-38-t0r" eventType="editingChanged" id="2D8-KE-DVh"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,6 +78,7 @@
                     <connections>
                         <outlet property="inputArea" destination="rTm-Ih-jCP" id="HSA-g1-p3E"/>
                         <outlet property="messageInputTextField" destination="PwE-6l-hkG" id="7Zo-0C-uhi"/>
+                        <outlet property="sendButton" destination="q6w-1O-i6N" id="Lqr-qa-hP0"/>
                         <outlet property="tableView" destination="EAM-8l-NRJ" id="nJ5-t3-Z5K"/>
                     </connections>
                 </viewController>

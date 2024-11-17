@@ -8,11 +8,16 @@
 import UIKit
 
 class ChatFrameCell: UITableViewCell {
-    @IBOutlet weak var bubbleBackgroundView: UIView! // 背景ビュー
-    @IBOutlet weak var messageLabel: UILabel! // メッセージラベル
+    @IBOutlet weak var bubbleBackgroundView: UIView!
+    @IBOutlet weak var messageLabel: UILabel!
     
     @IBOutlet weak var bubbleLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var bubbleTrailingConstraint: NSLayoutConstraint!
+    
+    struct Constants {
+        static let RADIUS_SIZE: CGFloat = 15
+        static let USER_ME: Int = 0
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +26,7 @@ class ChatFrameCell: UITableViewCell {
     
     private func setupUI() {
         // 吹き出しの背景設定
-        bubbleBackgroundView.layer.cornerRadius = 15
-        bubbleBackgroundView.clipsToBounds = true
+        bubbleBackgroundView.layer.cornerRadius = Constants.RADIUS_SIZE
         bubbleBackgroundView.backgroundColor = .azure
         
         // セル全体の背景色を透明にする
@@ -30,15 +34,14 @@ class ChatFrameCell: UITableViewCell {
         contentView.backgroundColor = .clear
         
         // メッセージラベルの設定
-        messageLabel.textColor = .white
         messageLabel.textAlignment = .center
-        messageLabel.numberOfLines = 0
+        messageLabel.font = UIFont.italicSystemFont(ofSize: 12.0) 
     }
     
     func configure(with message: Message) {
         messageLabel.text = message.text
         
-        if (message.User == 0) {
+        if (message.User == Constants.USER_ME) {
             // 自分
             bubbleTrailingConstraint.priority = .defaultLow
             bubbleLeadingConstraint.priority = .defaultHigh
